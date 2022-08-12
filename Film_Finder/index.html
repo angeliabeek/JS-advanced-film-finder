@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Film Finder</title>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <script src="https://kit.fontawesome.com/332d840c31.js" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="Scripts/movie_database.js"></script>
+    <script defer type="text/javascript" src="Scripts/script.js"></script>
+</head>
+
+<body>
+    <header class="top">
+        <h1 class="top__heading">Film Finder</h1>
+        <nav class="top__nav" id="moviefilter">
+            <span class="top__nav__filter">
+                <input type="radio" id="new-movies" name="film-filter" value="new-movies">
+                <label for="new-movies">Latest movies, 2014 or newer</label>
+            </span>
+            <span class="top__nav__filter">
+                <input type="radio" id="avenger" name="film-filter" value="avenger">
+                <label for="new-movies">Avenger movies</label>
+            </span>
+            <span class="top__nav__filter">
+                <input type="radio" id="x-men" name="film-filter" value="x-men">
+                <label for="new-movies">X-Men movies</label>
+            </span>
+            <span class="top__nav__filter">
+                <input type="radio" id="princess" name="film-filter" value="princess">
+                <label for="new-movies">Princess movies</label>
+            </span>
+            <span class="top__nav__filter">
+                <input type="radio" id="batman" name="film-filter" value="batman">
+                <label for="new-movies">Batman movies</label>
+            </span>
+            <span class="top__nav__filter--search">
+                <input type="text" placeholder="Zoek film.." id="searchText">
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <ul id="movielist">
+        </ul>
+    </main>
+    <footer>
+        <p>Copyright 2022</p>
+        <p>Angelia Beek</p>
+    </footer>
+</body>
+
+</html>

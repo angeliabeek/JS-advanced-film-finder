@@ -1,0 +1,143 @@
+// Variables
+$textcolor: white;
+$darkbackground: rgb(33, 30, 30);
+$lighterbackground: rgb(98, 7, 7);
+$searchbutton: rgb(119, 115, 115);
+
+// Styling
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $lighterbackground;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top {
+    background-color: $darkbackground;
+    color: $textcolor;
+
+    &__heading {
+        padding: 20px;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: center;
+        font-size: 16px;
+
+        &__filter {
+            display: block;
+            float: left;
+            padding-top: 6px;
+            text-align: center;
+            font-size: 18px;
+
+            &--search {
+                padding-bottom: 20px;
+
+                & input[type=text] {
+                    width: 120px;
+                    margin-top: 8px;
+                    border: 1px solid $darkbackground;
+                    border-right: none;
+                    border-radius: 10px 0 0 10px;
+                    padding: 10px;
+                    font-size: 17px;
+                }
+
+                & button {
+                    background-color: $searchbutton;
+                    margin-top: 8px;
+                    margin-right: 16px;
+                    border: 1px solid $darkbackground;
+                    border-left: none;
+                    border-radius: 0 10px 10px 0;
+                    padding: 10px;
+                    font-size: 17px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lighterbackground;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#movielist {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-auto-flow: row;
+    place-items: center;
+    place-content: center;
+    list-style-type: none;
+
+    & li a img {
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: $darkbackground;
+    padding: 50px;
+
+    & p {
+        margin: 10px;
+        text-align: center;
+        color: $textcolor;
+    }
+}
+
+@media (min-width: 768px) {
+    #movielist {
+        margin: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-auto-flow: row;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .top {
+        background-color: $darkbackground;
+        color: $textcolor;
+
+        &__heading {
+            padding: 40px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            font-size: 16px;
+
+            &__filter {
+                padding: 16px;
+            }
+        }
+    }
+
+    #movielist {
+        margin: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        grid-auto-flow: row;
+    }
+}
